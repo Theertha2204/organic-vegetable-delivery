@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Cart</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/products">Products</a>
+    <a href="/orders">Orders</a>
+</div>
+
+<div class="cart-container">
+
+    <h2 class="cart-title">🛒 Your Cart</h2>
+
+    <div class="cart-card" th:each="item : ${cartItems}">
+        
+        <img th:src="@{'/images/' + ${item.product.imageUrl}}" class="cart-img">
+
+        <div class="cart-details">
+            <h3 th:text="${item.product.name}"></h3>
+            <p th:text="${item.product.description}"></p>
+
+            <p><b>Quantity:</b> <span th:text="${item.quantity}"></span></p>
+            <p><b>Total:</b> ₹ <span th:text="${item.totalPrice}"></span></p>
+
+            <a th:href="@{'/cart/remove/' + ${item.id}}">
+                <button class="remove-btn">Remove</button>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="cart-actions">
+        <a href="/checkout"><button class="checkout-btn">Proceed to Checkout</button></a>
+        <a href="/products"><button class="continue-btn">Continue Shopping</button></a>
+    </div>
+
+</div>
+
+</body>
+</html>

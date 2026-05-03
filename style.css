@@ -1,0 +1,286 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4fff4;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2e7d32;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 60px;
+    background: linear-gradient(to right, #a8e063, #56ab2f);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+/* Product cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+button {
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+
+/* CART PAGE */
+
+.cart-container {
+    width: 85%;
+    margin: 30px auto;
+}
+
+.cart-title {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+/* Cart Card */
+.cart-card {
+    display: flex;
+    background: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    align-items: center;
+}
+
+/* Image */
+.cart-img {
+    width: 120px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* Details */
+.cart-details h3 {
+    margin: 0;
+    color: #2e7d32;
+}
+
+.cart-details p {
+    margin: 5px 0;
+}
+
+/* Buttons */
+.remove-btn {
+    background-color: red;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: darkred;
+}
+
+.cart-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.checkout-btn:hover {
+    background-color: #1b5e20;
+}
+
+.continue-btn {
+    background-color: gray;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.continue-btn:hover {
+    background-color: black;
+}
+
+
+/* CHECKOUT PAGE */
+
+.checkout-container {
+    width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.checkout-title {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* Button */
+.place-order-btn {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.place-order-btn:hover {
+    background-color: #1b5e20;
+}
+
+
+/* ORDERS PAGE */
+
+.orders-container {
+    width: 85%;
+    margin: 30px auto;
+}
+
+.orders-title {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+/* Order Card */
+.order-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+/* Header inside card */
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Status badges */
+.status {
+    padding: 6px 12px;
+    border-radius: 15px;
+    color: white;
+    font-size: 12px;
+}
+
+.status.pending {
+    background-color: orange;
+}
+
+.status.completed {
+    background-color: green;
+}
+
+.status.cancelled {
+    background-color: red;
+}
+
+/* Back button */
+.back-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-btn button {
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.back-btn button:hover {
+    background-color: #1b5e20;
+}

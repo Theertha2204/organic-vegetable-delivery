@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Orders</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/products">Products</a>
+    <a href="/cart">Cart</a>
+</div>
+
+<div class="orders-container">
+
+    <h2 class="orders-title">📦 Order History</h2>
+
+    <div class="order-card" th:each="order : ${orders}">
+
+        <div class="order-header">
+            <h3 th:text="${order.customerName}"></h3>
+            <span class="status"
+                  th:classappend="${order.status == 'Pending'} ? ' pending' :
+                                  (${order.status == 'Completed'} ? ' completed' : ' cancelled')"
+                  th:text="${order.status}">
+            </span>
+        </div>
+
+        <p><b>Address:</b> <span th:text="${order.address}"></span></p>
+        <p><b>Total:</b> ₹ <span th:text="${order.totalAmount}"></span></p>
+
+    </div>
+
+    <div class="back-btn">
+        <a href="/"><button>Back to Home</button></a>
+    </div>
+
+</div>
+
+</body>
+</html>

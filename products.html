@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Products</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/cart">Cart</a>
+</div>
+
+<h2 style="text-align:center;">Available Vegetables</h2>
+
+<div class="container">
+
+    <div class="card" th:each="p : ${products}">
+        <img th:src="@{'/images/' + ${p.imageUrl}}" alt="Veg Image">
+
+        <h3 th:text="${p.name}"></h3>
+        <p th:text="${p.description}"></p>
+        <p>₹ <span th:text="${p.price}"></span></p>
+
+        <a th:href="@{'/cart/add/' + ${p.id}}">
+            <button>Add to Cart</button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

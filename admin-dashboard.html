@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+</head>
+<body>
+<h1>Admin Dashboard</h1>
+<a href="/admin/add-product">Add Product</a>
+<h2>All Products</h2>
+<div th:each="product : ${products}">
+        <p th:text="${product.name}"></p>
+        <p>₹ <span th:text="${product.price}"></span></p>
+        <hr>
+</div>
+<h2>All Orders</h2>
+  <div th:each="order : ${orders}">
+        <p th:text="${order.customerName}"></p>
+        <p th:text="${order.status}"></p>
+        <hr>
+    </div>
+</body>
+</html>
